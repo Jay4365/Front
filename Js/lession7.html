@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conditional Operators (?)</h1>
+    <script>
+        let message=null;
+        let age= prompt("What is your age",'');
+        age = parseInt (age);
+        message = (age<12)?"you are toddler" : (age<20)? "you are teenager" : (age<61)? "you are working citizen" : "You are senior citizen";
+        alert(message);
+    </script>
+</body>
+</html>

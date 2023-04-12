@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Example of function</h1>
+    <hr>
+    <table border="2" align="center" width="50%">
+        <tr>
+            <td>Pi Value</td>
+            <td id="pi"></td>
+        </tr>
+        <tr>
+            <td>Qube Of Five</td>
+            <td id="qube"></td>
+        </tr>
+        <tr>
+            <td>Current Date And Time</td>
+            <td id="currentdatetime"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+        function getPi() {
+            let pi = 3.14;
+            return pi;
+        }
+        function getQube(number)
+        {
+            number = Math.abs(number);
+            let qube = number * number * number;
+            return qube;
+        }      
+        function showCurrentDateTime() {
+            let date = new Date();
+            let datetime = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "" + date.getHours() + ":" + date.getMinutes();
+            html('currentdatetime', datetime);
+        }
+        function html(id, message) {
+            document.getElementById(id).innerHTML = message;
+        }
+
+        showCurrentDateTime();
+        var pi = getPi();
+        html('pi', pi);
+        var result = getQube();
+        html('qube', result);
+        
+    </script>
+</body>
+
+</html>
